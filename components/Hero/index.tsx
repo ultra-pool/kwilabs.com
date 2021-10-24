@@ -21,11 +21,11 @@ export default function Hero(props?: HeroProps) {
     return (
         <section className={`w-full bg-gradient-to-b ${backgroundClasses}`}>
             <div className="flex container mx-auto py-32 lg:py-16 items-center px-4 2xl:px-0">
-                <div className="flex flex-col items-center md:items-baseline space-y-8 md:w-6/12">
+                <div className="flex flex-col items-center md:items-baseline space-y-8 flex-1">
                     {textBundle}
                 </div>
                 {!!props.image ? (
-                    <div className="w-6/12 hidden md:flex items-center">
+                    <div className="hidden flex-1 md:flex items-center">
                         <img src={props.image.src} alt={props.image.alt}/>
                     </div>
                 ) : ''}
