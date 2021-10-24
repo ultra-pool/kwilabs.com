@@ -13,7 +13,7 @@ export function ToastContextProvider({children}) {
         if (toasts.length > 0) {
             const timer = setTimeout(
                 () => setToasts((_toasts) => _toasts.slice(1)),
-                3000
+                1000
             );
             return () => clearTimeout(timer);
         }
@@ -21,7 +21,13 @@ export function ToastContextProvider({children}) {
 
     const addToast = useCallback(
         function (toast: string) {
-            setToasts((_toasts) => [..._toasts, toast]);
+            setToasts((_toasts) => {
+                if (_toasts.length >= 3) {
+                    _toasts.shift();
+                }
+
+                return [..._toasts, toast];
+            });
         },
         [setToasts]
     );
