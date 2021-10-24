@@ -161,7 +161,7 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section withContainer={false}>
+            <Section withContainer={false} reducedSpace={true}>
                 <div className="flex flex-col md:flex-row md:container md:mx-auto">
                     <div className="flex-grow flex flex-col justify-center">
                         <h2 className="text-2xl md:text-4xl text-center md:text-left font-semibold">It's fun to drop the
