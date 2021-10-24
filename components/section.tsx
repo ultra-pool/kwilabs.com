@@ -11,7 +11,7 @@ export type SectionProps = {
 }
 
 export default function Section(props: SectionProps) {
-    let classList = ["flex flex-col"];
+    let classList = ["flex flex-col px-4 2xl:px-0"];
     if (props.withContainer || props.withContainer === undefined) {
         classList.push("container mx-auto");
     }
@@ -26,20 +26,21 @@ export default function Section(props: SectionProps) {
 
     classList.push(props.reducedSpace ? 'py-8' : 'py-32');
 
-    return (
-        <section className={classList.join(' ')}>
-            {(!!props.text || !!props.title) ? (
-                <div>
-                    {!!props.title ? (
-                        <h2 className="text-4xl font-medium">{props.title}</h2>
-                    ) : ''}
-
-                    {!!props.text ? (
-                        <h2 className="mt-4">{props.text}</h2>
-                    ) : ''}
-                </div>
+    const textBundle = (
+        <div>
+            {!!props.title ? (
+                <h2 className="text-center md:text-left text-2xl md:text-3xl lg:text-4xl font-semibold md:font-medium">{props.title}</h2>
             ) : ''}
 
+            {!!props.text ? (
+                <h2 className="text-center md:text-left mt-4">{props.text}</h2>
+            ) : ''}
+        </div>
+    )
+
+    return (
+        <section className={classList.join(' ')}>
+            {(!!props.text || !!props.title) ? textBundle : ''}
             {props.children}
         </section>
     )

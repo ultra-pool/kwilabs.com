@@ -5,18 +5,19 @@ import {FaDiscord, FaGithub, FaMedium, FaTwitter} from "react-icons/fa";
 export default function Footer() {
     return (
         <footer className="border-t">
-            <div className="container mx-auto flex p-8 items-center">
-                <div className="flex flex-col">
+            <div className="md:container md:mx-auto flex md:flex-row flex-col md:p-8 py-8 items-center space-y-4">
+                <div className="flex flex-col mb-2 md:mb-0">
                     <Link href="/">
-                        <a>
+                        <a className='flex items-center justify-center'>
                             <img className="h-16" src="/kwilabs-logo-dark.svg" alt="Dark Kwilabs Logo"/>
                         </a>
                     </Link>
                     <span className="text-sm text-gray-800">Copyright &copy; {new Date().getFullYear()} kwilabs</span>
                 </div>
 
-                <div className="flex-grow flex flex-col px-64 text-sm text-gray-800 space-y-4">
-                    <div className="flex justify-center space-x-8">
+                <div className="md:flex-grow flex md:flex-col text-sm text-gray-800 md:space-y-4">
+                    <div
+                        className="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-2 md:space-y-0">
                         <a href="https://medium.com/@kwilabs" target="_blank">Blog</a>
                         {/*<a href="#!">Support</a>*/}
                         {/*<a href="#!">Contact</a>*/}

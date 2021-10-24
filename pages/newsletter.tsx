@@ -1,5 +1,4 @@
 import {Layout} from "../components/layout";
-import Section from "../components/section";
 
 export default function Newsletter() {
     return (
@@ -11,11 +10,11 @@ export default function Newsletter() {
                 title: 'Get Updates'
             }}>
 
-            <Section>
+            <div className='py-16'>
                 <iframe
                     className='w-full newsletter-frame'
                     src="https://cdn.forms-content.sg-form.com/fe6a8439-3482-11ec-8a28-a6726f3cf46e"/>
-            </Section>
+            </div>
 
         </Layout>
     )

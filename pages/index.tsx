@@ -80,35 +80,36 @@ export default function Home() {
             <Section title='3 steps for an end-to-end backend service for your app'
                      text='Get a full backend service for all your needs in 3 simple steps.'>
 
-                <div className="flex justify-evenly items-center space-x-6">
-                    <div className="border rounded-md p-4 w-3/12 flex-1">
+                <div
+                    className="flex flex-col md:flex-row md:justify-evenly md:space-x-6 space-y-6 md:space-y-0">
+                    <div className="border rounded-md p-4 md:flex md:flex-col md:items-baseline">
                         <span className="font-medium rounded-full bg-red-600 text-white px-3">Step #1</span>
                         <h3 className="mt-3 text-2xl font-medium">
                             Deploy
                         </h3>
-                        <p className="mt-3">
+                        <p className="mt-3 md:flex md:flex-1 md:place-items-end">
                             Use our pre-built templates to deploy kwilabs with Docker, Kubernetes, or on bare-metal with
                             Ansible.
                         </p>
                     </div>
 
-                    <div className="border rounded-md p-4 w-3/12 flex-1">
+                    <div className="border rounded-md p-4 md:flex md:flex-col md:items-baseline">
                         <span className="font-medium rounded-full bg-red-600 text-white px-3">Step #2</span>
                         <h3 className="mt-3 text-2xl font-medium">
                             Configure
                         </h3>
-                        <p className="mt-3">
+                        <p className="mt-3 md:flex md:flex-1 md:place-items-end">
                             Configure kwilabs through a simple first-time configuration wizard with
                             sensible defaults.
                         </p>
                     </div>
 
-                    <div className="border rounded-md p-4 w-3/12 flex-1">
+                    <div className="border rounded-md p-4 md:flex md:flex-col md:items-baseline">
                         <span className="font-medium rounded-full bg-red-600 text-white px-3">Step #3</span>
                         <h3 className="mt-3 text-2xl font-medium">
                             Kickstart Your Product
                         </h3>
-                        <p className="mt-3">
+                        <p className="mt-3 md:flex md:flex-1 md:place-items-end">
                             Start using kwilabs through well-defined and well-documented API and bring your product into
                             life.
                         </p>
@@ -123,10 +124,10 @@ export default function Home() {
             <Section
                 title='Strong, Secure and Flexible'
                 text='Add, remove and scale any service you need at anytime.'>
-                <div className="grid grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
                     {modules.map((module, index) => (
-                        <div key={`feature-card-${index}`} className="p-4 space-y-4">
+                        <div key={`feature-card-${index}`} className="p-4 space-y-4 text-center md:text-left h-full">
                             <div className="inline-block bg-red-200 text-red-600 p-2 rounded-md">
                                 <module.icon size={32}/>
                             </div>
@@ -150,7 +151,7 @@ export default function Home() {
                     </div>
 
                     {Array.from(Array(4 - (modules.length + 1) % 4).keys()).map((_, index) => (
-                        <div key={`feature-card-placeholder-${index}`} className="rounded-md  p-4 space-y-4 ">
+                        <div key={`feature-card-placeholder-${index}`} className="rounded-md p-4 space-y-4 hidden lg:block">
                             <div className="bg-gray-100 rounded-md p-1 inline-block w-12 h-12">&nbsp;</div>
                             <div className="bg-gray-100 rounded-md p-1 text-2xl">&nbsp;</div>
                             <div className="bg-gray-100 rounded-md">&nbsp;<br/>&nbsp;</div>
@@ -161,12 +162,14 @@ export default function Home() {
             </Section>
 
             <Section withContainer={false}>
-                <div className="flex container mx-auto">
+                <div className="flex flex-col md:flex-row md:container md:mx-auto">
                     <div className="flex-grow flex flex-col justify-center">
-                        <h2 className="text-4xl font-semibold">It's fun to drop the redundancy.</h2>
-                        <p className="mt-8 text-xl font-light">Have your time for yourself, and your mental health. Use
+                        <h2 className="text-2xl md:text-4xl text-center md:text-left font-semibold">It's fun to drop the
+                            redundancy.</h2>
+                        <p className="mt-8 text-lg md:text-xl font-light">Have your time for yourself, and your mental
+                            health. Use
                             kwilabs' low effort backend service.</p>
-                        <p className="mt-2 text-xl font-light">
+                        <p className="mt-2 text-lg md:text-xl font-light">
                             Checkout how we develop <a className="font-bold"
                                                        target='_blank'
                                                        href="https://kwidoo.app">kwidoo.app</a> with kwilabs on <a
@@ -175,7 +178,7 @@ export default function Home() {
                             href="https://github.com/kwilabs/kwidoo">GitHub</a>.
                         </p>
                     </div>
-                    <img src='/hamster.jpg' alt='Cute Hamster' className="w-4/12"/>
+                    <img src='/hamster.jpg' alt='Cute Hamster' className="mt-8 md:mt-0 md:w-4/12"/>
                 </div>
             </Section>
 

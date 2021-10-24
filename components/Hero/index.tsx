@@ -18,25 +18,17 @@ export default function Hero(props?: HeroProps) {
         </>
     );
 
-    if (!props.image) {
-        return (
-            <section className={`w-full bg-gradient-to-b ${backgroundClasses}`}>
-                <div className="flex flex-col container mx-auto py-16 items-baseline space-y-8">
-                    {textBundle}
-                </div>
-            </section>
-        )
-    }
-
     return (
         <section className={`w-full bg-gradient-to-b ${backgroundClasses}`}>
-            <div className="flex container mx-auto py-16 items-center">
-                <div className="flex flex-col items-baseline space-y-8 w-6/12">
+            <div className="flex container mx-auto py-32 lg:py-16 items-center px-4 2xl:px-0">
+                <div className="flex flex-col items-center md:items-baseline space-y-8 md:w-6/12">
                     {textBundle}
                 </div>
-                <div className="w-6/12 flex items-center">
-                    <img src={props.image.src} alt={props.image.alt}/>
-                </div>
+                {!!props.image ? (
+                    <div className="w-6/12 hidden md:flex items-center">
+                        <img src={props.image.src} alt={props.image.alt}/>
+                    </div>
+                ) : ''}
             </div>
         </section>
     );

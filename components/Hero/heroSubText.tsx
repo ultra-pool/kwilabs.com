@@ -9,7 +9,7 @@ export function HeroSubText(props: { subText: string | string[] }) {
         return (
             <>
                 {props.subText.map(text => (
-                    <p className="text-lg">
+                    <p className="text-lg text-center md:text-left">
                         {text}
                     </p>
                 ))}
@@ -18,7 +18,7 @@ export function HeroSubText(props: { subText: string | string[] }) {
     }
 
     return (
-        <p className="text-lg">
+        <p className="text-lg text-center md:text-left">
             {props.subText}
         </p>
     );

@@ -28,7 +28,7 @@ export default function Branding(): JSX.Element {
         >
             <Section title={'Logos'} reducedSpace={true} className='pt-32'>
 
-                <div className='grid grid-cols-3 gap-8'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     {logos.map(logoSrc => (
                         <a href={logoSrc} target='_blank'>
                             <div className='bg-gray-300 rounded-md hover:shadow-md justify-center flex'>
@@ -42,9 +42,9 @@ export default function Branding(): JSX.Element {
 
             <Section title={'Brand Colors'} reducedSpace={true} className='pb-32'>
 
-                <div className='flex justify-evenly h-64'>
-                    <div className='flex flex-col items-center space-y-4 w-3/12'>
-                        <div className='border rounded-md bg-kwilabs-red flex-grow w-full'>
+                <div className='flex flex-col md:flex-row md:justify-evenly md:h-64 space-y-4 md:space-y-0'>
+                    <div className='flex flex-col items-center space-y-2 md:space-y-4 md:w-3/12'>
+                        <div className='border rounded-md bg-kwilabs-red flex-grow w-full h-32 md:h-0'>
                             &nbsp;
                         </div>
 
@@ -57,22 +57,22 @@ export default function Branding(): JSX.Element {
                         </div>
                     </div>
 
-                    <div className='flex flex-col items-center space-y-4 w-3/12'>
-                        <div className='border rounded-md bg-kwilabs-gray flex-grow w-full'>
+                    <div className='flex flex-col items-center space-y-2 md:space-y-4 md:w-3/12'>
+                        <div className='border rounded-md bg-kwilabs-gray flex-grow w-full h-32 md:h-0'>
                             &nbsp;
                         </div>
 
                         <div className='overflow-hidden rounded w-full flex bg-gray-100'>
                             <span className='p-2 flex-grow'>#495057</span>
                             <button
-                                className='bg-gray-400  w-10 justify-center items-center flex p-2 text-gray-50 hover:bg-gray-300'>
+                                className='bg-gray-400 w-10 justify-center items-center flex p-2 text-gray-50 hover:bg-gray-300'>
                                 <FaClipboard/>
                             </button>
                         </div>
                     </div>
 
-                    <div className='flex flex-col items-center space-y-4 w-3/12'>
-                        <div className='border rounded-md bg-kwilabs-black flex-grow w-full'>
+                    <div className='flex flex-col items-center space-y-2 md:space-y-4 md:w-3/12'>
+                        <div className='border rounded-md bg-kwilabs-black flex-grow w-full h-32 md:h-0'>
                             &nbsp;
                         </div>
 
