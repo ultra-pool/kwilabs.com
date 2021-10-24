@@ -32,8 +32,8 @@ export default function Branding(): JSX.Element {
             <Section title={'Logos'} reducedSpace={true} className='pt-32'>
 
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-                    {logos.map(logoSrc => (
-                        <a href={logoSrc} target='_blank'>
+                    {logos.map((logoSrc, index) => (
+                        <a href={logoSrc} key={`logo-variant-${index}`} target='_blank'>
                             <div className='bg-gray-300 rounded-md hover:shadow-md justify-center flex'>
                                 <img src={logoSrc} alt={'kwilabs logo'} className='max-h-32'/>
                             </div>
