@@ -4,6 +4,7 @@ import Section from "../components/section";
 import {CTA} from "../components/cta";
 import {FaClipboard} from "react-icons/fa";
 import React from "react";
+import useToastContext from "../components/toast/useToastContext";
 
 export default function Branding(): JSX.Element {
     const logos: string[] = [
@@ -14,6 +15,8 @@ export default function Branding(): JSX.Element {
         '/branding/kwilabs-neutral-1.svg',
         '/branding/kwilabs-dark-1.svg',
     ];
+
+    const addToast = useToastContext();
 
     return (
         <Layout
@@ -51,6 +54,12 @@ export default function Branding(): JSX.Element {
                         <div className='overflow-hidden rounded w-full flex bg-gray-100'>
                             <span className='p-2 flex-grow'>#E71D36</span>
                             <button
+                                onClick={() => {
+                                    navigator.clipboard.writeText('E71D36')
+                                        .then(() => {
+                                            addToast('Copied to clipboard!');
+                                        });
+                                }}
                                 className='bg-gray-400 w-10 justify-center items-center flex p-2 text-gray-50 hover:bg-gray-300'>
                                 <FaClipboard/>
                             </button>
@@ -65,6 +74,12 @@ export default function Branding(): JSX.Element {
                         <div className='overflow-hidden rounded w-full flex bg-gray-100'>
                             <span className='p-2 flex-grow'>#495057</span>
                             <button
+                                onClick={() => {
+                                    navigator.clipboard.writeText('495057')
+                                        .then(() => {
+                                            addToast('Copied to clipboard!');
+                                        });
+                                }}
                                 className='bg-gray-400 w-10 justify-center items-center flex p-2 text-gray-50 hover:bg-gray-300'>
                                 <FaClipboard/>
                             </button>
@@ -79,6 +94,12 @@ export default function Branding(): JSX.Element {
                         <div className='overflow-hidden rounded w-full flex bg-gray-100'>
                             <span className='p-2 flex-grow'>#212529</span>
                             <button
+                                onClick={() => {
+                                    navigator.clipboard.writeText('212529')
+                                        .then(() => {
+                                            addToast('Copied to clipboard!');
+                                        });
+                                }}
                                 className='bg-gray-400 w-10 justify-center items-center flex p-2 text-gray-50 hover:bg-gray-300'>
                                 <FaClipboard/>
                             </button>
