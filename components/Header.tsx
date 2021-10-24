@@ -20,18 +20,19 @@ export default function Header() {
                     <a href="https://medium.com/@kwilabs" target="_blank" className={headerLinkClassList}>
                         Blog
                     </a>
-                    <Link href="/">
-                        <a className={headerLinkClassList}>Contact</a>
-                    </Link>
+                    {/*<Link href="/">*/}
+                    {/*    <a className={headerLinkClassList}>Contact</a>*/}
+                    {/*</Link>*/}
                 </div>
                 <a href="https://github.com/kwilabs"
                    target='_blank'
                    className="flex items-center space-x-2 hover:bg-gray-100 rounded-sm px-4 py-4">
                     <FaGithub/> <span className="font-medium">GitHub</span>
                 </a>
-                <Link href="/">
-                    <a className="transition-all bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-4">Get
-                        Updates</a>
+                <Link href="/newsletter">
+                    <a className="transition-all bg-red-600 hover:bg-red-500 text-white rounded-full px-8 py-4">
+                        Get Updates
+                    </a>
                 </Link>
             </div>
         </header>

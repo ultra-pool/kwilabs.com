@@ -26,7 +26,7 @@ export default function Branding(): JSX.Element {
                 background: HeroBackgroundVariant.Page
             }}
         >
-            <Section title={'Logos'} reducedSpace={true}>
+            <Section title={'Logos'} reducedSpace={true} className='pt-32'>
 
                 <div className='grid grid-cols-3 gap-8'>
                     {logos.map(logoSrc => (
@@ -40,7 +40,7 @@ export default function Branding(): JSX.Element {
 
             </Section>
 
-            <Section title={'Brand Colors'} reducedSpace={true}>
+            <Section title={'Brand Colors'} reducedSpace={true} className='pb-32'>
 
                 <div className='flex justify-evenly h-64'>
                     <div className='flex flex-col items-center space-y-4 w-3/12'>
@@ -88,9 +88,9 @@ export default function Branding(): JSX.Element {
 
             </Section>
 
-            <Section title={'Built with kwilabs Badge'} reducedSpace={true}>
-                &nbsp;
-            </Section>
+            {/*<Section title={'Built with kwilabs Badge'} reducedSpace={true}>*/}
+            {/*    &nbsp;*/}
+            {/*</Section>*/}
 
             <CTA/>
         </Layout>

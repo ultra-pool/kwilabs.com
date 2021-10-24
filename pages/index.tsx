@@ -6,6 +6,7 @@ import Section from "../components/section";
 import {CommunityCTA, CTA, ThinCTA} from "../components/cta";
 import {Layout} from "../components/layout";
 import {IconType} from "react-icons";
+import Link from 'next/link';
 
 type ModuleListItem = {
     icon: IconType;
@@ -64,7 +65,7 @@ export default function Home() {
                 actions: [
                     {
                         variant: HeroActionVariant.Solid,
-                        href: '/',
+                        href: '/newsletter',
                         label: 'Get Updates'
                     },
                     {
@@ -140,10 +141,12 @@ export default function Home() {
                         </div>
                         <h3 className="text-2xl font-semibold">More to come</h3>
                         <p>Subscribe to newsletter and be first to hear when we release a new module.</p>
-                        <a href="#!"
-                           className="block transition-all border-red-600 border-2 bg-red-600 hover:bg-red-500 text-white rounded-full px-4 py-2 text-center">
-                            Get Updates
-                        </a>
+                        <Link href='/newsletter'>
+                            <a
+                                className="block transition-all border-red-600 border-2 bg-red-600 hover:bg-red-500 text-white rounded-full px-4 py-2 text-center">
+                                Get Updates
+                            </a>
+                        </Link>
                     </div>
 
                     {Array.from(Array(4 - (modules.length + 1) % 4).keys()).map((_, index) => (

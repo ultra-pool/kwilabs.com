@@ -19,7 +19,7 @@ export default function Footer() {
                     <div className="flex justify-center space-x-8">
                         <a href="https://medium.com/@kwilabs" target="_blank">Blog</a>
                         {/*<a href="#!">Support</a>*/}
-                        <a href="#!">Contact</a>
+                        {/*<a href="#!">Contact</a>*/}
                         <Link href={'/branding'}>
                             <a>Logos & Assets</a>
                         </Link>

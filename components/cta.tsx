@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "./section";
 import {FaDiscord, FaGithub, FaTwitter} from "react-icons/fa";
+import Link from "next/link";
 
 export function CTA() {
     return (
@@ -8,10 +9,12 @@ export function CTA() {
             <div className="container mx-auto flex flex-col items-center space-y-8">
                 <h2 className="text-3xl font-semibold">Stay up-to-date with latest news and announcements</h2>
 
-                <a href="#!"
-                   className="block transition-all hover:shadow-xl bg-white text-red-600 font-medium text-xl rounded-full py-3 px-4">
-                    Subscribe for Updates
-                </a>
+                <Link href='/newsletter'>
+                    <a
+                        className="block transition-all hover:shadow-xl bg-white text-red-600 font-medium text-xl rounded-full py-3 px-4">
+                        Subscribe for Updates
+                    </a>
+                </Link>
             </div>
         </Section>
     );
@@ -27,10 +30,12 @@ export function ThinCTA(props: ThinCTAProps) {
         <div className="w-full bg-gradient-to-tr text-white from-red-600 to-red-500">
             <div className="flex w-8/12 mx-auto p-8 items-center">
                 <span className="flex-grow text-lg">{props.title}</span>
-                <a href="#!"
-                   className="block transition-all hover:shadow-xl bg-white text-red-600 text-lg rounded-full py-3 px-4">
-                    {props.buttonLabel}
-                </a>
+                <Link href='/newsletter'>
+                    <a
+                        className="block transition-all hover:shadow-xl bg-white text-red-600 text-lg rounded-full py-3 px-4">
+                        {props.buttonLabel}
+                    </a>
+                </Link>
             </div>
         </div>
     );
